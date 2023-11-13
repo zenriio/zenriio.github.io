@@ -1,4 +1,53 @@
-ientY - floatingWindow.getBoundingClientRect().top;
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the floating window */
+        .floating-window {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 150px;
+            background-color: #fff;
+            border: 2px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            z-index: 9999; /* Make sure it's on top of other elements */
+        }
+
+        /* Style for the close button */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- Floating window content -->
+<div class="floating-window">
+    <div class="close-button" onclick="closeFloatingWindow()">X</div>
+    <h2>I hope you'll like this!!</h2>
+    <p>close this and... Surprise!</p>
+</div>
+
+<!-- JavaScript to make the window draggable and closable -->
+<script>
+    var floatingWindow = document.querySelector('.floating-window');
+
+    floatingWindow.addEventListener('mousedown', function (e) {
+        var offsetX = e.clientX - floatingWindow.getBoundingClientRect().left;
+        var offsetY = e.clientY - floatingWindow.getBoundingClientRect().top;
 
         function moveWindow(e) {
             floatingWindow.style.left = e.clientX - offsetX + 'px';
@@ -37,6 +86,7 @@ ientY - floatingWindow.getBoundingClientRect().top;
 <h1 style="text-family:roman; text-align:center; text-size:40px;"> Red Tulips</h1>
 <p style="text-align:center;">Red tulips symbolize true love and passion.</p>
 <p style="text-align:center;">They are often given to express romantic love and deep affection.</p>
+<h2> For you my Love</h2>
 
 
 <img src="red tulips.webp" alt="tulips" style="width:400px;height:400px;">
@@ -44,18 +94,19 @@ ientY - floatingWindow.getBoundingClientRect().top;
 
 
 
-
-
-
+<h1 style="color:lightgray;"> jijadjanaiudjsjd</h1>
+<h1 style="color:lightgray;"> jijadjanaiudjsjd</h1>
+<h1 style="color:lightgray;"> jijadjanaiudjsjd</h1>
+<h1 style="color:lightgray;"> jijadjanaiudjsjd</h1>
 
 
 <p> 
 <img src="kiss.gif" alt="omg"
 style="float:left; width:300px; height:300px;">
-Sa mundong walang kulay , ng dumating kay nagkaroon ito ng buhay.
+Sa mundong walang kulay,ng dumating kay nagkaroon ito ng buhay.
 <img src="hug.gif" alt="omg"
 style="float:right; width:300px; height:300px;"></p>
-sa iyong mga ngiti , puso ko'y tila nag wagi.
+<p>sa iyong mga ngiti , puso ko'y tila nag wagi.</p>
 <p> Sa sulok ng kwarto, ako'y napapa ngiti mo.</p>
 <p> Pasensya na sapagkat ako'y torpe ,</p>
 <p> Ngunit ito ang alam ko, </p>
