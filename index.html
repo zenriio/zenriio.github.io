@@ -1,128 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+ientY - floatingWindow.getBoundingClientRect().top;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: lightgray;
-            margin: 0;
-            padding: 0;
+        function moveWindow(e) {
+            floatingWindow.style.left = e.clientX - offsetX + 'px';
+            floatingWindow.style.top = e.clientY - offsetY + 'px';
         }
 
-        .floating-window {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 400px;
-            background-color: #fff;
-            border: 2px solid #000;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            z-index: 9999;
+        function stopMoving() {
+            window.removeEventListener('mousemove', moveWindow);
+            window.removeEventListener('mouseup', stopMoving);
         }
 
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
+        window.addEventListener('mousemove', moveWindow);
+        window.addEventListener('mouseup', stopMoving);
+    });
 
-        body {
-            background-color: lightgray;
-            margin: 0;
-            padding: 0;
-        }
+    function closeFloatingWindow() {
+        floatingWindow.style.display = 'none';
+    }
+ 
+</script>
 
-        h1 {
-            font-family: 'roman';
-            text-align: center;
-            font-size: 1.5em;
-        }
 
-        p {
-            text-align: center;
-        }
+<body style="background-color:lightgray;">
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
-    <title>Birthday Present For My Lovely Wife</title>
-</head>
 
-<body>
 
-    <div class="floating-window">
-        <div class="close-button" onclick="closeFloatingWindow()">X</div>
-        <h2>I hope you'll like this!!</h2>
-        <p>Close this and... Surprise!</p>
-    </div>
+<title> Birthday Present For My Lovely Wife</title>
 
-    <h1>Red Tulips</h1>
-    <p>Red tulips symbolize true love and passion.</p>
-    <p>They are often given to express romantic love and deep affection.</p>
 
-    <img src="red_tulips.webp" alt="tulips">
 
-    <p>
-        <img src="kiss.gif" alt="omg" style="width: 100%; max-width: 300px;">
-        Sa mundong walang kulay, ng dumating kay nagkaroon ito ng buhay.
-        <img src="hug.gif" alt="omg" style="width: 100%; max-width: 300px;">
-    </p>
 
-    <p>Sa iyong mga ngiti, puso ko'y tila nagwawagi.</p>
-    <p>Sa sulok ng kwarto, ako'y napapa ngiti mo.</p>
-    <p>Pasensya na sapagkat ako'y torpe,</p>
-    <p>Ngunit ito ang alam ko,</p>
-    <p>Ang katulad ko'y parang pulang mga tulips,</p>
-    <p>Sapagkat ako'y nagtataglay ng pagmamahal na labis.</p>
 
-    <p>Alam ko kung ga'no ka nahirapan,</p>
-    <p>Kaya naman hayaan mo'kong pasayahin ang iyong kinabukasan.</p>
-    <p>Tandaan mo, na nandito lang ako para sa'yo.</p>
-    <p>Hindi kita iiwan,</p>
-    <p>Sapagkat ang puso ko'y ikaw lang ang nilalaman.</p>
 
-    <p>Sa mga oras na tayo ay malayo,</p>
-    <p>Tandaan mo na tayo muli ay magtatagpo.</p>
-    <p>Wala man ako sa iyong tabi,</p>
-    <p>Ikaw naman lagi ang aking baby.</p>
+<center>
 
-    <script>
-        var floatingWindow = document.querySelector('.floating-window');
+<h1 style="text-family:roman; text-align:center; text-size:40px;"> Red Tulips</h1>
+<p style="text-align:center;">Red tulips symbolize true love and passion.</p>
+<p style="text-align:center;">They are often given to express romantic love and deep affection.</p>
 
-        floatingWindow.addEventListener('mousedown', function (e) {
-            var offsetX = e.clientX - floatingWindow.getBoundingClientRect().left;
-            var offsetY = e.clientY - floatingWindow.getBoundingClientRect().top;
 
-            function moveWindow(e) {
-                floatingWindow.style.left = e.clientX - offsetX + 'px';
-                floatingWindow.style.top = e.clientY - offsetY + 'px';
-            }
+<img src="red tulips.webp" alt="tulips" style="width:400px;height:400px;">
 
-            function stopMoving() {
-                window.removeEventListener('mousemove', moveWindow);
-                window.removeEventListener('mouseup', stopMoving);
-            }
 
-            window.addEventListener('mousemove', moveWindow);
-            window.addEventListener('mouseup', stopMoving);
-        });
 
-        function closeFloatingWindow() {
-            floatingWindow.style.display = 'none';
-        }
-    </script>
+
+
+
+
+
+
+<p> 
+<img src="kiss.gif" alt="omg"
+style="float:left; width:300px; height:300px;">
+Sa mundong walang kulay , ng dumating kay nagkaroon ito ng buhay.
+<img src="hug.gif" alt="omg"
+style="float:right; width:300px; height:300px;"></p>
+sa iyong mga ngiti , puso ko'y tila nag wagi.
+<p> Sa sulok ng kwarto, ako'y napapa ngiti mo.</p>
+<p> Pasensya na sapagkat ako'y torpe ,</p>
+<p> Ngunit ito ang alam ko, </p>
+<p> ang katulad ko'y parang</p>
+<p> Pulang mga tulips, </p>
+<p> sapagkat ako'y nagtataglay ng pagmamahal na labis.</p>
+
+
+<p>Alam ko kung ga'no ka nahirapan ,</p>
+<p>Kaya naman hayaan mo'kong pasayahin ang iyong kinabukasan.</p>
+<p>Tandaan mo, na nandito lang ako para sa'yo.</p>
+<p>hindi kita iiwan , sapagkat ang puso ko'y ikaw lang ang nilalaman.</p>
+
+<p>Sa mga oras na tayo ay malayo,</p>
+<p>Tandaan mo na tayo muli ay magtatagpo.</p>
+<p>Wala man ako sa iyong tabi ,</p>
+<p>Ikaw naman lagi ang aking baby.</p>
+
+
+
 
 </body>
-
 </html>
